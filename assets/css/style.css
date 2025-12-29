@@ -189,6 +189,47 @@ body {
 }
 
 
+.experience-section {
+    padding: 80px 10%;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.experience-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    border-left: 4px solid var(--net-blue);
+}
+
+.experience-card h3 {
+    color: var(--primary-blue);
+}
+
+.exp-duration {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.exp-role {
+    margin: 10px 0 15px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.experience-card ul {
+    padding-left: 18px;
+}
+
+.experience-card ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+
 
 /* DEPARTMENTS */
 .dept-section {
