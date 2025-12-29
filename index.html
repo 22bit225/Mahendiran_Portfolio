@@ -15,7 +15,9 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-HTZ34KNEL7');
+  gtag('config', 'G-HTZ34KNEL7', {
+  send_page_view: true
+});
 </script>
 </head>
 <body>
@@ -481,12 +483,14 @@ function toggleMenu() {
 
 <script>
 function trackResumeClick() {
-    gtag('event', 'resume_view', {
-        event_category: 'Resume',
-        event_label: 'Mahendiran Resume PDF'
-    });
+    if (typeof gtag === "function") {
+        gtag('event', 'resume_view', {
+            resume_name: 'Mahendiran Resume PDF'
+        });
+    }
 }
 </script>
+
 
 
 </body>
