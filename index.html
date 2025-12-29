@@ -207,6 +207,74 @@ As a fresher, I continuously improve my skills through projects, lab simulations
         </div>
     </section>
 
+    
+    <section id="departments" class="dept-section">
+    <div class="section" class="dept-section">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="gallery">
+        
+        <div class="dept-grid">
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/vlan-topology.png" alt="">
+            <div class="caption">Network Topology</div>
+            <span class="desc">
+                Overall VLAN-based office network topology showing router,
+                switch, multiple VLANs, and connected end devices.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/VLAN_Switch_Configuration_Step_By_Step.png" alt="">
+            <div class="caption">Switch VLAN Configuration</div>
+            <span class="desc">
+                VLAN creation, access port assignment, and trunk configuration
+                on managed Layer 2 switch.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/VLAN_Router_Configuration_Step_By_Step.png" alt="">
+            <div class="caption">Router Sub-Interface</div>
+            <span class="desc">
+                Router-on-a-Stick configuration using sub-interfaces
+                for inter-VLAN routing.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/Config_Devices.png" alt="">
+            <div class="caption">Device Configuration</div>
+            <span class="desc">
+                End devices configured to obtain IP addresses automatically
+                via DHCP.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/Ping_test_result.png" alt="">
+            <div class="caption">Ping Test Result</div>
+            <span class="desc">
+                Successful inter-VLAN communication verified using ping tests.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="./project-images/Confirm_Config.png" alt="">
+            <div class="caption">Configuration Verification</div>
+            <span class="desc">
+                Final verification of VLAN, IP addressing, and routing setup.
+            </span>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+
+
+
     <!--
     <section id="integrated" class="integrated-section">
         <div class="integrated-box">
@@ -276,6 +344,39 @@ As a fresher, I continuously improve my skills through projects, lab simulations
     <footer>
         <p>© 2025 by Mahendiran</p>
     </footer>
+
+
+
+
+    <div class="modal" id="imageModal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <div class="modal-content">
+        <img id="modalImg" src="">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+    </div>
+    </div>
+
+    <script>
+function openModal(element) {
+    const img = element.querySelector("img").src;
+    const title = element.querySelector(".caption").innerText;
+    const desc = element.querySelector(".desc").innerText;
+
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+
+    document.getElementById("imageModal").style.display = "block";
+    document.body.style.overflow = "hidden"; // stop background scroll
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+    document.body.style.overflow = "auto";
+}
+</script>
 
 </body>
 </html>
