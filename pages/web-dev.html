@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development | Mahendran</title>
+<link rel="icon" type="image/png" href="../assets/images/Mahi.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root {
+    --card-bg: #161b22;
+    --primary-blue: #58a6ff;
+    --web-green: #3fb950;
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+}
+a { text-decoration: none; }
+
+/* Navbar */
+.navbar {
+    padding: 15px 10%;
+    background: #161b22;
+}
+.navbar .logo a { font-weight: bold; color: white; }
+
+/* Featured Project */
+.featured-project {
+    padding: 20px 10%;
+}
+.featured-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+}
+.featured-box .content { flex: 1 1 400px; }
+.featured-box h3 { font-size: 2.4rem; color: var(--primary-blue); margin-bottom: 10px; }
+.tag { color: var(--web-green); font-weight: bold; margin-bottom: 15px; }
+.featured-box p { margin: 8px 0; line-height: 1.5; }
+.features-list { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+.features-list span { font-size: 0.9rem; background: #21262d; padding: 5px 12px; border-radius: 20px; }
+
+.featured-box .mockup-img img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.project-actions a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-primary { background: var(--primary-blue); color: #fff; }
+.btn-primary:hover { opacity: 0.8; }
+.btn-secondary { background: #21262d; color: #fff; }
+.btn-secondary:hover { opacity: 0.8; }
+
+/* Other Projects Grid */
+.other-projects { padding: 60px 10%; }
+.web-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 30px; }
+.web-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.web-card:hover { transform: scale(1.03); }
+.web-card img { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 15px; }
+.card-body h4 { margin-bottom: 8px; color: #fff; }
+.tech-used { margin-top: 10px; font-size: 0.8rem; color: var(--primary-blue); font-weight: bold; }
+
+/* Section Titles */
+.section-title { margin-bottom: 40px; font-size: 1.8rem; color: #fff; }
+
+/* Footer */
+footer { text-align: center; padding: 30px 0; background: #161b22; margin-top: 50px; }
+
+@media(max-width:900px){
+    .featured-box { flex-direction: column; text-align:center; }
+    .featured-box .mockup-img img { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"><a href="../index.html">⮜ Home</a></div>
+</nav>
+
+<!-- Featured Project -->
+<section class="featured-project">
+    <h2 class="section-title">⭐ Featured Project</h2>
+    <div class="featured-box" id="featured">
+        <div class="content">
+            <h3 id="f-title"></h3>
+            <p class="tag" id="f-tag"></p>
+            <p id="f-purpose"></p>
+            <p id="f-importance"></p>
+            <p id="f-desc"></p>
+            <div class="features-list" id="f-features"></div>
+            <div class="project-actions">
+                <a href="#" class="btn-primary" id="f-demo">View Demo</a>
+                <a href="#" class="btn-secondary" id="f-code" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+            </div>
+        </div>
+        <div class="mockup-img">
+            <img src="" alt="Featured Project" id="f-img">
+        </div>
+    </div>
+</section>
+
+<!-- Other Projects -->
+<section class="other-projects">
+    <h2 class="section-title">More Web Projects</h2>
+    <div class="web-grid">
+        <div class="web-card" data-index="0">
+            <img src="../assets/images/Logo-preview.png" alt="ID Card">
+            <div class="card-body">
+                <h4>ID Card Management System</h4>
+            </div>
+        </div>
+        <div class="web-card" data-index="1">
+            <img src="../assets/images/Logo-preview.png" alt="Portfolio Site">
+            <div class="card-body">
+                <h4>Personal Portfolio Website</h4>
+            </div>
+        </div>
+        <div class="web-card" data-index="2">
+            <img src="../assets/images/Logo-preview.png" alt="Login Page">
+            <div class="card-body">
+                <h4>Secure Login Interface</h4>
+            </div>
+        </div>
+        <div class="web-card" data-index="3">
+            <img src="../assets/images/Logo-preview.png" alt="Office Website">
+            <div class="card-body">
+                <h4>Corporate Landing Page</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Mahendran</p>
+</footer>
+
+<script>
+// Project Data
+const projects = [
+{
+    title: "ID Card Management System",
+    tag: "Full-Stack Implementation",
+    purpose: "To help organizations manage employee identification efficiently, replacing manual card creation with automated ID management.",
+    importance: "Ensures accurate records, saves time, avoids errors, and allows quick retrieval of ID information, critical for security and administration.",
+    desc: "A full-stack system with dynamic data entry, image upload, and print-ready ID templates. Demonstrates backend integration with database storage and frontend interactivity.",
+    features: ["JavaScript Validation","Responsive Layout","Dynamic ID Generation","Database Integration","Print-ready ID Template"],
+    demo:"#",
+    code:"https://github.com/22bit225/Mahendiran",
+    img:"../assets/images/Logo-preview.png"
+},
+{
+    title: "Personal Portfolio Website",
+    tag: "Frontend Development",
+    purpose: "To showcase skills, projects, and professional profile in a modern, accessible way.",
+    importance: "Helps recruiters and clients quickly understand your abilities, improving chances for interviews and freelance opportunities.",
+    desc: "A sleek and responsive portfolio built with HTML, CSS, and JavaScript, with smooth scrolling and section-based layout.",
+    features: ["Mobile-friendly","Smooth scrolling","Interactive project cards","Professional UI","SEO-friendly structure"],
+    demo:"#",
+    code:"https://github.com/22bit225/",
+    img:"../assets/images/Logo-preview.png"
+},
+{
+    title: "Secure Login Interface",
+    tag: "UX/UI Design",
+    purpose: "To demonstrate knowledge of user authentication and secure UI design in web applications.",
+    importance: "Login pages are critical for security, user trust, and usability in real-world applications.",
+    desc: "A login interface with real-time validation, responsive design, and glassmorphism styling. Perfect for web applications requiring secure access.",
+    features: ["Real-time Validation","Glassmorphism","Responsive Layout","Clean UX","Security-first design"],
+    demo:"#",
+    code:"https://github.com/22bit225/Sample",
+    img:"../assets/images/Logo-preview.png"
+},
+{
+    title: "Corporate Landing Page",
+    tag: "Business Website",
+    purpose: "To simulate building a professional business website for IT firms or startups.",
+    importance: "Shows ability to create multi-page responsive layouts and integrate sections like About, Services, Portfolio, and Contact.",
+    desc: "A multi-page landing site for a mock IT consultancy firm, designed for responsiveness and modern aesthetics.",
+    features: ["Multi-page Layout","Interactive Navigation","Corporate Style","UX-focused Sections","Business Presentation"],
+    demo:"#",
+    code:"https://github.com/22bit225/",
+    img:"../assets/images/Logo-preview.png"
+}
+];
+
+// DOM Elements
+const fTitle = document.getElementById("f-title");
+const fTag = document.getElementById("f-tag");
+const fPurpose = document.getElementById("f-purpose");
+const fImportance = document.getElementById("f-importance");
+const fDesc = document.getElementById("f-desc");
+const fFeatures = document.getElementById("f-features");
+const fDemo = document.getElementById("f-demo");
+const fCode = document.getElementById("f-code");
+const fImg = document.getElementById("f-img");
+
+const cards = document.querySelectorAll(".web-card");
+
+// Function to update featured project
+function showFeatured(index){
+    const p = projects[index];
+    fTitle.innerText = p.title;
+    fTag.innerText = p.tag;
+    fPurpose.innerHTML = `<strong>Purpose:</strong> ${p.purpose}`;
+    fImportance.innerHTML = `<strong>Importance:</strong> ${p.importance}`;
+    fDesc.innerText = p.desc;
+    fFeatures.innerHTML = p.features.map(f => `<span><i class="fas fa-check"></i> ${f}</span>`).join("");
+    fDemo.href = p.demo;
+    fCode.href = p.code;
+    fImg.src = p.img;
+}
+
+// Add click event to project cards
+cards.forEach(card=>{
+    card.addEventListener("click",()=>{
+        const index = card.getAttribute("data-index");
+        showFeatured(index);
+        window.scrollTo({top:0,behavior:"smooth"});
+    });
+});
+
+// Default featured project
+showFeatured(0);
+</script>
+
+</body>
+</html>

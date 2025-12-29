@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLAN Network Project | Mahendiran</title>
+<link rel="icon" type="image/png" href="../assets/images/Mahi.png">
+
+<style>
+
+
+.navbar {
+    padding: 15px 10%;
+    background: #161b22;
+}
+
+.navbar .logo a { font-weight: bold; color: white; text-decoration: none; }
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    color: #38bdf8;
+}
+
+.section {
+    background: #020617;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(56,189,248,0.1);
+}
+
+.project-title {
+    text-align: center;
+}
+
+.project-title h1 {
+    font-size: 36px;
+}
+
+.badge {
+    display: inline-block;
+    background: #38bdf8;
+    color: #020617;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #334155;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #020617;
+    color: #38bdf8;
+}
+
+/* Screenshot Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #38bdf8;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #94a3b8;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 25px rgba(56,189,248,0.2);
+}
+
+
+@media (max-width: 600px) {
+    .project-title h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    height: 220px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom on hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.85);
+    color: #38bdf8;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Hide description text */
+.desc {
+    display: none;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+
+    /* CENTER + SCROLL FIX */
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+
+.modal-content {
+    max-width: 900px;
+    margin: auto;
+    background: #020617;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+
+.modal-content h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #e5e7eb;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #38bdf8;
+    cursor: pointer;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+    <div class="logo"><a href="../pages/networking.html">⮜ Back</a></div>
+    </nav>
+
+<div class="container">
+
+    <!-- TITLE -->
+    <div class="section project-title">
+        <h1>VLAN Based Office Network Project</h1>
+        <span class="badge">Networking • VLAN • Packet Tracer</span>
+        <p>Designed & Implemented by <strong>Mahendiran</strong></p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section">
+        <h2>Project Overview</h2>
+        <p>
+            This project demonstrates the design and implementation of a 
+            <strong>VLAN-based office network</strong> using Cisco Packet Tracer.
+            The goal was to improve <strong>network segmentation, security, and performance</strong>
+            by logically separating departments using VLANs.
+        </p>
+    </div>
+
+    <!-- WHY CREATED -->
+    <div class="section">
+        <h2>Why This Project Was Created</h2>
+        <ul>
+            <li>To understand real-time enterprise network structure</li>
+            <li>To implement VLAN segmentation for department-wise isolation</li>
+            <li>To practice router-on-a-stick configuration</li>
+            <li>To improve troubleshooting and networking skills</li>
+            <li>To prepare for Network Engineer / System Admin roles</li>
+        </ul>
+    </div>
+
+    <!-- NETWORK DESIGN -->
+    <div class="section">
+        <h2>Network Design & Architecture</h2>
+        <ul>
+            <li>1 Router (Inter-VLAN Routing)</li>
+            <li>1 Managed Layer 2 Switch</li>
+            <li>Multiple PCs & Laptops</li>
+            <li>Separate VLANs for each department</li>
+        </ul>
+    </div>
+
+    <!-- VLAN TABLE -->
+    <div class="section">
+        <h2>VLAN Configuration Details</h2>
+
+        <table>
+            <tr>
+                <th>VLAN ID</th>
+                <th>Department</th>
+                <th>IP Range</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>Admin</td>
+                <td>192.168.10.0/24</td>
+                <td>Management</td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>HR</td>
+                <td>192.168.20.0/24</td>
+                <td>Employee Data</td>
+            </tr>
+            <tr>
+                <td>300</td>
+                <td>Marketing</td>
+                <td>192.168.30.0/24</td>
+                <td>Business Operations</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>IT</td>
+                <td>192.168.40.0/24</td>
+                <td>Infrastructure</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Guest</td>
+                <td>192.168.50.0/24</td>
+                <td>Restricted Access</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <h2>Real-Time Experience Gained</h2>
+        <ul>
+            <li>Configured VLANs on managed switches</li>
+            <li>Assigned access & trunk ports correctly</li>
+            <li>Configured Router-on-a-Stick (Sub-Interfaces)</li>
+            <li>Tested inter-VLAN communication</li>
+            <li>Applied security by isolating Guest VLAN</li>
+            <li>Troubleshot IP and connectivity issues</li>
+        </ul>
+    </div>
+
+    <!-- SCREENSHOTS -->
+    <div class="section">
+    <h2>Project Screenshots</h2>
+
+    <div class="gallery">
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project-images/vlan-topology.png" alt="">
+            <div class="caption">Network Topology</div>
+            <span class="desc">
+                Overall VLAN-based office network topology showing router,
+                switch, multiple VLANs, and connected end devices.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project_images/VLAN_Switch_Configuration_Step_By_Step.png" alt="">
+            <div class="caption">Switch VLAN Configuration</div>
+            <span class="desc">
+                VLAN creation, access port assignment, and trunk configuration
+                on managed Layer 2 switch.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project_images/VLAN_Router_Configuration_Step_By_Step.png" alt="">
+            <div class="caption">Router Sub-Interface</div>
+            <span class="desc">
+                Router-on-a-Stick configuration using sub-interfaces
+                for inter-VLAN routing.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project_images/Config_Devices.png" alt="">
+            <div class="caption">Device Configuration</div>
+            <span class="desc">
+                End devices configured to obtain IP addresses automatically
+                via DHCP.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project_images/Ping_test_result.png" alt="">
+            <div class="caption">Ping Test Result</div>
+            <span class="desc">
+                Successful inter-VLAN communication verified using ping tests.
+            </span>
+        </div>
+
+        <div class="gallery-item" onclick="openModal(this)">
+            <img src="../project_images/Confirm_Config.png" alt="">
+            <div class="caption">Configuration Verification</div>
+            <span class="desc">
+                Final verification of VLAN, IP addressing, and routing setup.
+            </span>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- SKILLS -->
+    <div class="section">
+        <h2>Skills & Technologies Used</h2>
+        <ul>
+            <li>VLAN Configuration</li>
+            <li>Inter-VLAN Routing</li>
+            <li>Cisco Packet Tracer</li>
+            <li>Network Troubleshooting</li>
+            <li>IP Addressing & Subnetting</li>
+        </ul>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="section">
+        <h2>✅ Project Outcome</h2>
+        <p>
+            Successfully implemented a secure and scalable VLAN-based office network.
+            This project enhanced my practical understanding of networking concepts and
+            prepared me for real-world IT infrastructure roles.
+        </p>
+    </div>
+
+    <div class="footer">
+        © 2025 Mahendran | Networking Portfolio
+    </div>
+
+</div>
+
+
+<div class="modal" id="imageModal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <div class="modal-content">
+        <img id="modalImg" src="">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+<script>
+function openModal(element) {
+    const img = element.querySelector("img").src;
+    const title = element.querySelector(".caption").innerText;
+    const desc = element.querySelector(".desc").innerText;
+
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+
+    document.getElementById("imageModal").style.display = "block";
+    document.body.style.overflow = "hidden"; // stop background scroll
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+    document.body.style.overflow = "auto";
+}
+</script>
+
+
+
+</body>
+</html>
