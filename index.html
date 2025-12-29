@@ -11,16 +11,26 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">🛡️MAHENDIRAN</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#departments">Branches</a></li>
-            <li><a href="#Certificates">Certificates</a></li>
-            <li><a href="#contact" class="btn-contact">Contact Me</a></li>
-        </ul>
+    <div class="logo">🛡️MAHENDIRAN</div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#departments">Branches</a></li>
+        <li><a href="#Certificates">Certificates</a></li>
+        <li><a href="#contact" class="btn-contact">Contact Me</a></li>
+    </ul>
     </nav>
+
 
     
 
@@ -55,7 +65,7 @@ As a fresher, I continuously improve my skills through projects, lab simulations
     </section>
 
     <section id="experience" class="experience-section">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title">Internship work</h2>
 
     <div class="experience-container">
 
@@ -203,17 +213,19 @@ As a fresher, I continuously improve my skills through projects, lab simulations
     </div>
 </section>
 
-
+     
+    <section id="resume">
     <header class="hero">
         <div class="hero-content">
             <h1>Aspiring IT Systems & Security Engineer</h1>
             <p>Bridging the gap between Web Development, Network Infrastructure, and SOC Operations.</p>
             <div class="hero-btns">
                 <a href="#departments" class="btn-primary">View My Work</a>
-                <a href="./assets/Resume/Resume.pdf" class="btn-secondary" target="_blank">Download Resume</a>
+                <a href="./assets/Resume/Mahendiran_Resume.pdf" class="btn-secondary" target="_blank">Download Resume</a>
             </div>
         </div>
     </header>
+    </section>
 
     <section id="departments" class="dept-section">
         <h2 class="section-title"> DOMAINS </h2>
@@ -434,6 +446,26 @@ function closeModal() {
     document.body.style.overflow = "auto";
 }
 </script>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+<script>
+const navLinks = document.querySelectorAll("#navLinks a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
 
 </body>
 </html>
