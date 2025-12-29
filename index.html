@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/png" href="./assets/images/Mahi.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTZ34KNEL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HTZ34KNEL7');
+</script>
 </head>
 <body>
 
@@ -222,7 +231,8 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <p>Bridging the gap between Web Development, Network Infrastructure, and SOC Operations.</p>
             <div class="hero-btns">
                 <a href="#departments" class="btn-primary">View My Work</a>
-                <a href="./assets/Resume/Mahendiran_Resume.pdf" class="btn-secondary" target="_blank" rel="noopener noreferrer">View Resume</a>
+                <a href="./assets/Resume/Mahendiran_Resume.pdf" class="btn-secondary" target="_blank" rel="noopener noreferrer" onclick="trackResumeClick()"> View Resume</a>
+
             </div>
         </div>
     </header>
@@ -464,6 +474,17 @@ navLinks.forEach(link => {
 
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+
+
+<script>
+function trackResumeClick() {
+    gtag('event', 'resume_view', {
+        event_category: 'Resume',
+        event_label: 'Mahendiran Resume PDF'
+    });
 }
 </script>
 
