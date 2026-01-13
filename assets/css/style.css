@@ -53,6 +53,28 @@ body {
     font-size: 0.9rem;
 }
 
+/* NAV LINK BASE STYLE */
+.nav-links a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* HOVER EFFECT (LIKE CONTACT BUTTON) */
+.nav-links a:hover {
+    background: var(--primary-blue);
+    color: #ffffff;
+}
+
+/* KEEP CONTACT BUTTON SAME ON HOVER */
+.btn-contact:hover {
+    background: var(--primary-blue);
+}
+
+
 .btn-contact {
     background: var(--primary-blue);
     padding: 6px 14px;
