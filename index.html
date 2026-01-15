@@ -408,18 +408,13 @@ As a fresher, I continuously improve my skills through projects, lab simulations
 
         </div>
 
-        <!-- Contact Form -->
-        <form class="contact-form">
-            <h3>Send a Message</h3>
+        <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="mail" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
 
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-
-            <!-- <button type="submit" class="btn-primary">Send Message</button> -->
-            <button type="submit" class="btn-primary">Not connected to the backend, so use another way to connect or message.</button>
-
-        </form>
 
         <!-- <a href="https://google.com" target="_blank">🐧</a> -->
 
@@ -562,7 +557,7 @@ function trackResumeClick() {
   data.append("emailaddr", ipData.email || "N/A");
 
   // SEND TO GOOGLE SHEET
-  fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+  fetch("https://script.google.com/macros/s/AKfycbwaq1dvRhPgHyW0kuge3NTVk3Sa8V-IvcF_mwelXTkAk1GmeLn8GPOzk2Si7KVL0H_CVQ/exec", {
     method: "POST",
     body: data
   })
