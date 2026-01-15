@@ -512,60 +512,50 @@ function trackResumeClick() {
 
 
 <script>
-    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const form = e.target;
-  const data = new FormData(form);
+  const data = new URLSearchParams(new FormData(e.target));
 
-  // Timestamp & Date-Time
   const now = new Date();
   data.append("timestamp", now.toISOString());
   data.append("datetime", now.toLocaleString());
-
-  // Screen size
   data.append("screensize", `${screen.width}x${screen.height}`);
+  data.append("device", /Mobi|Android/i.test(navigator.userAgent) ? "Mobile" : "Desktop");
 
-  // Device type
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-  data.append("device", isMobile ? "Mobile" : "Desktop");
-
-  // OS detection
   let os = "Unknown";
-  if (navigator.userAgent.indexOf("Windows") !== -1) os = "Windows";
-  else if (navigator.userAgent.indexOf("Android") !== -1) os = "Android";
-  else if (navigator.userAgent.indexOf("iPhone") !== -1) os = "iOS";
-  else if (navigator.userAgent.indexOf("Mac") !== -1) os = "macOS";
+  if (/Windows/i.test(navigator.userAgent)) os = "Windows";
+  else if (/Android/i.test(navigator.userAgent)) os = "Android";
+  else if (/iPhone|iPad/i.test(navigator.userAgent)) os = "iOS";
+  else if (/Mac/i.test(navigator.userAgent)) os = "macOS";
   data.append("os", os);
 
-  // Browser detection
   let browser = "Unknown";
-  if (navigator.userAgent.indexOf("Chrome") !== -1) browser = "Chrome";
-  else if (navigator.userAgent.indexOf("Edg") !== -1) browser = "Edge";
-  else if (navigator.userAgent.indexOf("Firefox") !== -1) browser = "Firefox";
-  else if (navigator.userAgent.indexOf("Safari") !== -1) browser = "Safari";
+  if (/Edg/i.test(navigator.userAgent)) browser = "Edge";
+  else if (/Chrome/i.test(navigator.userAgent)) browser = "Chrome";
+  else if (/Firefox/i.test(navigator.userAgent)) browser = "Firefox";
+  else if (/Safari/i.test(navigator.userAgent)) browser = "Safari";
   data.append("browser", browser);
 
-  // Get IP & Location
-  const res = await fetch("https://ipapi.co/json/");
-  const ipData = await res.json();
+  try {
+    const ipRes = await fetch("https://ipapi.co/json/");
+    const ip = await ipRes.json();
+    data.append("ip", ip.ip);
+    data.append("city", ip.city);
+    data.append("region", ip.region);
+    data.append("country", ip.country_name);
+  } catch {}
 
-  data.append("ip", ipData.ip);
-  data.append("city", ipData.city);
-  data.append("region", ipData.region);
-  data.append("country", ipData.country_name);
-  data.append("emailaddr", ipData.email || "N/A");
-
-  // SEND TO GOOGLE SHEET
   fetch("https://script.google.com/macros/s/AKfycbwaq1dvRhPgHyW0kuge3NTVk3Sa8V-IvcF_mwelXTkAk1GmeLn8GPOzk2Si7KVL0H_CVQ/exec", {
     method: "POST",
-    body: data
-  })
-  .then(() => alert("Message submitted successfully"))
-  .catch(() => alert("Submission failed"));
-});
+    body: data,
+    mode: "no-cors"
+  });
 
+  alert("Message submitted successfully");
+});
 </script>
+
 
 </body>
 </html>
