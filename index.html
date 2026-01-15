@@ -548,7 +548,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   fetch("https://script.google.com/macros/s/AKfycbwaq1dvRhPgHyW0kuge3NTVk3Sa8V-IvcF_mwelXTkAk1GmeLn8GPOzk2Si7KVL0H_CVQ/exec", {
     method: "POST",
-    body: data,
+    body: new URLSearchParams(data),
     mode: "no-cors"
   });
 
