@@ -55,7 +55,7 @@
                 <h2>About Me</h2><br>
 
                 <p style="opacity:0.8; margin-bottom:20px;">
-Fresher | Chennai | Open to Networking, IT Support & SOC roles
+ Chennai | Networking, IT Support & SOC roles
 </p>
 
                 <!-- <p>I am Mahendran, an aspiring IT Systems and Security Engineer with a strong foundation in networking, system administration, and cybersecurity fundamentals. I am passionate about building, managing, and securing IT infrastructure, and I enjoy working hands-on with real-world technical challenges.
@@ -69,7 +69,7 @@ As a fresher, I continuously improve my skills through projects, lab simulations
 </div>
                     <div class="stack-item"> I have practical experience with <strong>LAN/WAN networking, VLAN configuration,</strong> DHCP, routing concepts, and <strong>basic firewall security,</strong> along with Windows and Linux system administration. I am also familiar with IT support operations, including <strong>troubleshooting</strong> hardware, software, and network-related issues.
 </div>
-                    <div class="stack-item"> As a fresher, I continuously improve my skills through projects, lab simulations, and self-learning, with a strong interest in <strong>SOC operations</strong> and secure infrastructure design. My goal is to start my career in Networking, IT Support, System Administration, or Cybersecurity, where I can contribute, learn from experienced professionals, and grow into a skilled IT engineer.
+                    <div class="stack-item">  I continuously improve my skills through projects, lab simulations, and self-learning, with a strong interest in <strong>SOC operations</strong> and secure infrastructure design. My goal is to start my career in Networking, IT Support, System Administration, or Cybersecurity, where I can contribute, learn from experienced professionals, and grow into a skilled IT engineer.
 </div>
                 </div>
             </div>
@@ -284,9 +284,7 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <img src="./assets/certificates/networking-basics.webp" alt="">
             <div class="caption">Network Basics - Cisco</div>
             <span class="desc">
-                Networking Basic things learnt
-                Overall VLAN-based office network topology showing router,
-                switch, multiple VLANs, and connected end devices.
+                Cisco Networking Essentials & Infrastructure I completed a comprehensive deep-dive into the foundations of digital connectivity. This project involved mastering the OSI and TCP/IP models, configuring SOHO networks, and implementing IPv4/IPv6 addressing schemes. I gained hands-on experience using Cisco Packet Tracer to simulate, secure, and troubleshoot network environments.
             </span>
         </div>
 
@@ -294,9 +292,7 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <img src="./assets/certificates/Network_troubleshooting.webp" alt="">
             <div class="caption">Network troubleshooting - Cisco</div>
             <span class="desc">
-                Learn the Networking hands-on using Network addressing and troubleshooting
-                VLAN creation, access port assignment, and trunk configuration
-                on managed Layer 2 switch.
+                Cisco Network Troubleshooting Course Successfully completed a Cisco troubleshooting course focused on real-world network problem solving. Developed skills in diagnosing connectivity issues, configuring and troubleshooting routers and switches, analyzing Layer 2 and Layer 3 problems, implementing VLANs, DHCP, and basic routing protocols using Cisco Packet Tracer and CLI.
             </span>
         </div>
 
@@ -304,9 +300,7 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <img src="./assets/certificates/Network_Device.webp" alt="">
             <div class="caption">Device Config(IOS Commands)</div>
             <span class="desc">
-                Device Initial configuration(Router & Switch) IOS Commands
-                Router-on-a-Stick configuration using sub-interfaces
-                for inter-VLAN routing.
+                Hands-on experience with Cisco IOS commands for configuring routers and switches. Proficient in interface configuration, VLANs, trunking, DHCP, static and dynamic routing, access control basics, and troubleshooting network issues using CLI tools.
             </span>
         </div>
 
@@ -315,8 +309,6 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <div class="caption">Cybersecurity - ISRO</div>
             <span class="desc">
                 ISRO Cybersecurity basics and defence things
-                End devices configured to obtain IP addresses automatically
-                via DHCP.
             </span>
         </div>
 
@@ -324,16 +316,15 @@ As a fresher, I continuously improve my skills through projects, lab simulations
             <img src="./assets/certificates/cybrary-SOC.webp" alt="">
             <div class="caption">SOC Analyst - Cybrary</div>
             <span class="desc">
-                Learn SOC analyst tools and hands-on experience using Cybrary
-                Successful inter-VLAN communication verified using ping tests.
+                Successfully completed Cybrary’s SOC Level 1 course with hands-on exposure to security monitoring, alert triage, log analysis, incident response basics, SIEM concepts, and threat detection techniques used in real-world SOC environments.
             </span>
         </div>
 
         <div class="gallery-item" onclick="openModal(this)">
             <img src="./assets/certificates/google_cybersecurity.webp" alt="">
-            <div class="caption">Cybersecurity fundamentals - Google</div>
+            <div class="caption">Google Fundamentals of Cybersecurity</div>
             <span class="desc">
-                Final verification of VLAN, IP addressing, and routing setup.
+                Completed Google’s Fundamentals of Cybersecurity course, gaining strong knowledge of cybersecurity concepts including common threats and attacks, vulnerabilities, risk management, security controls, and best practices for protecting systems, networks, and data.
             </span>
         </div>
         </div>
@@ -461,7 +452,10 @@ As a fresher, I continuously improve my skills through projects, lab simulations
     </div>
     </div>
 
-    <script>
+
+    
+
+    <script defer>
 function openModal(element) {
     const img = element.querySelector("img").src;
     const title = element.querySelector(".caption").innerText;
@@ -480,13 +474,21 @@ function closeModal() {
     document.body.style.overflow = "auto";
 }
 </script>
-
 <script>
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+</script>
+
+
+<script defer>
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
 </script>
-<script>
+<script defer>
 const navLinks = document.querySelectorAll("#navLinks a");
 
 navLinks.forEach(link => {
@@ -502,7 +504,7 @@ function toggleMenu() {
 
 
 
-<script>
+<script defer>
 function trackResumeClick() {
     if (typeof gtag === "function") {
         gtag('event', 'resume_view', {
