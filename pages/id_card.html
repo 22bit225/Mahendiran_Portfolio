@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID CARD | Web Development</title>
+<link rel="icon" type="image/png" href="../assets/images/Mahi.webp">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTZ34KNEL7"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-HTZ34KNEL7', { send_page_view: true });
+</script>
+<style>
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --blue: #58a6ff;
+    --green: #3fb950;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #c9d1d9;
+}
+
+a { text-decoration: none; color: white; }
+
+/* Navbar */
+.navbar { background: var(--card); padding: 15px 10%; }
+.navbar a { font-weight: bold; }
+
+/* Main Container */
+.container {
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ID Card Image */
+.id-card-box {
+    display: flex;
+    justify-content: center; /* center horizontally */
+}
+.id-card-box img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--blue);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Project Description */
+.desc-box {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+.desc-box h2 { color: var(--blue); margin-bottom: 20px; }
+.desc-box p { margin: 10px 0; line-height: 1.6; }
+.features-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.features-list span { background: #21262d; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+/* Footer */
+footer { text-align: center; padding: 30px; background: var(--card); margin-top: 50px; }
+
+@media(max-width: 900px) {
+    .container { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="./web-dev.html">⮜ Home</a>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+
+    <!-- ID Card Image -->
+    <div class="id-card-box">
+        <img src="../project-images/id_card.webp" alt="College ID Card">
+    </div>
+
+    <!-- Project Description -->
+    <div class="desc-box">
+        <h2>Project Description</h2>
+
+        <p><strong>Purpose:</strong> This project was created for my college to provide a secure digital system for managing student identity and academic information, addressing the issue of temporary or unavailable result data.</p>
+
+        <p><strong>Problem Statement:</strong> In our college, marks and results are only displayed for a specific period. Students often do not receive marksheets quickly. Once the data is deleted or unavailable, students cannot access their past academic details.</p>
+
+        <p><strong>Solution:</strong> The system provides a <strong>digital ID card and student information management platform</strong> that securely stores student records. Features like QR code scanning, complaint management, and access to personal and academic details digitally enhance college administration.</p>
+
+        <p><strong>Key Features:</strong></p>
+        <div class="features-list">
+            <span>✅ Digital College ID Card</span>
+            <span>✅ QR Code for Student Details</span>
+            <span>✅ Complaint & Safety System</span>
+            <span>✅ Secure Login for Personal & Education Pages</span>
+            <span>✅ Access Semester Results Digitally</span>
+            <span>✅ Download Bus Pass, ID Card, Bonafide Certificate</span>
+            <span>✅ Staff Approval for Digital Documents</span>
+            <span>✅ Centralized Record Management</span>
+        </div>
+
+        <p><strong>Importance:</strong> Prevents loss of academic data, improves student safety, and enables quick access to digital certificates and ID cards. Students can access personal and education information securely, ensuring efficiency and reliability.</p>
+
+        <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, QR Code Integration, Secure Login Concepts, Responsive Web Design.</p>
+
+        <p><strong>Conclusion:</strong> This project provides a secure, efficient, and digital solution for managing student identity, academic records, and college services. It ensures that students can access their information even if official data is unavailable, improving college administration and digital transformation.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Mahendran | College ID Card & Student Info System
+</footer>
+
+</body>
+</html>

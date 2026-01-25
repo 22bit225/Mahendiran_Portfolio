@@ -16,7 +16,7 @@ gtag('config', 'G-HTZ34KNEL7', { send_page_view: true });
 </script>
 
 
-<!-- <style>
+<style>
 :root {
     --card-bg: #161b22;
     --primary-blue: #58a6ff;
@@ -126,8 +126,8 @@ footer { text-align: center; padding: 30px 0; background: #161b22; margin-top: 5
             <p id="f-desc"></p>
             <div class="features-list" id="f-features"></div>
             <div class="project-actions">
-                <a href="#" class="btn-primary" id="f-demo">View Demo</a>
-                <a href="#" class="btn-secondary" id="f-code" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                <a href="#" class="btn-primary" target="_blank" id="f-demo">View Demo</a>
+                <a href="#" class="btn-secondary" target="_blank" id="f-code" target="_blank"><i class="fab fa-github"></i> Source Code</a>
             </div>
         </div>
         <div class="mockup-img">
@@ -141,9 +141,15 @@ footer { text-align: center; padding: 30px 0; background: #161b22; margin-top: 5
     <h2 class="section-title">More Web Projects</h2>
     <div class="web-grid">
         <div class="web-card" data-index="0">
-            <img src="../assets/images/Logo-preview.png" alt="ID Card">
+            <img src="../project-images/id_card.webp" alt="ID Card">
             <div class="card-body">
                 <h4>ID Card Management System</h4>
+            </div>
+        </div>
+        <div class="web-card" data-index="1">
+            <img src="../project-images/Metal1.webp" alt="Metal urgical site">
+            <div class="card-body">
+                <h4>Metal booking Website</h4>
             </div>
         </div>
         <div class="web-card" data-index="1">
@@ -181,10 +187,31 @@ const projects = [
     importance: "Ensures accurate records, saves time, avoids errors, and allows quick retrieval of ID information, critical for security and administration.",
     desc: "A full-stack system with dynamic data entry, image upload, and print-ready ID templates. Demonstrates backend integration with database storage and frontend interactivity.",
     features: ["JavaScript Validation","Responsive Layout","Dynamic ID Generation","Database Integration","Print-ready ID Template"],
-    demo:"#",
+    demo:"../pages/id_card.html",
     code:"https://github.com/22bit225/Mahendiran",
-    img:"../assets/images/Logo-preview.png"
+    img:"../project-images/id_card.webp"
 },
+{
+    title: "Metal Urical Booking System",
+    tag: "Web Development / Real-Time Booking",
+    purpose: "To provide a real-time metal booking platform for IIPS, allowing users to book metals with quantity, size, and amount efficiently.",
+    importance: "Eliminates manual errors, saves time, and ensures transparent metal bookings for users and admins.",
+    desc: "A responsive and secure metal booking system built with HTML, CSS, and JavaScript, featuring real-time data handling, secure login, and an interactive dashboard.",
+    features: [
+        "User Login & Secure Authentication",
+        "Real-Time Metal Availability",
+        "Select Quantity, Size, and Amount",
+        "Instant Booking Confirmation",
+        "Dashboard for Users & Admin",
+        "History of Bookings",
+        "Responsive Home Page Design",
+        "Efficient Record Management"
+    ],
+    demo: "../pages/metal.html",
+    code: "https://github.com/22bit225/",
+    img: "../project-images/metal1.webp"
+},
+
 {
     title: "Personal Portfolio Website",
     tag: "Frontend Development",
@@ -258,166 +285,10 @@ cards.forEach(card=>{
 
 
 showFeatured(0);
-</script> -->
+
+</script>
 
 
-
-
-
-
-<style>
-:root {
-    --primary-blue: #2d3e50;
-    --accent-orange: #ff7a30;
-    --text-gray: #4a5568;
-    --bg-light: #f4f7f9;
-    --bg-dark: #0a0e14;
-    --card-bg: #161b22;
-    --primary-blue: #58a6ff;
-    --text-main: #c9d1d9;
-    --web-green: #2ea043;
-    --net-blue: #1f6feb;
-    --sys-purple: #8957e5;
-    --soc-red: #da3633;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-light);
-}
-
-/* Navbar */
-.navbar {
-    padding: 15px 10%;
-    background: #58a6ff;
-}
-
-.navbar .logo a {
-    font-weight: bold;
-    color: rgb(10, 62, 88);
-    text-decoration:none;
-}
-
-/* Page Wrapper */
-.page-wrapper {
-    min-height: calc(100vh - 60px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Main Card */
-.construction-card {
-    background: #ffffff;
-    width: 100%;
-    max-width: 1000px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-}
-
-/* Content */
-.content {
-    flex: 1;
-    padding: 60px;
-}
-
-.content a{
-    text-decoration: none;
-}
-
-.image-container {
-    flex: 1.2;
-    background-color: #f8fbff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-.image-container img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-}
-
-h1 {
-    font-size: 3rem;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--accent-orange);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-    .content { padding: 40px; }
-    h1 { font-size: 2.2rem; }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .construction-card {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .content {
-        padding: 40px 20px 50px;
-    }
-
-    h1 { font-size: 2rem; }
-    p { font-size: 1rem; }
-}
-</style>
-
-
-
-<body>
-
-<nav class="navbar">
-    <div class="logo"><a href="../index.html">⮜ Home</a></div>
-</nav>
-
-<div class="page-wrapper">
-    <main class="construction-card">
-
-        <section class="content">
-            <h1>Under<br>Construction</h1>
-            <p>Our team is working hard to bring you a better experience. We will be back online shortly!</p>
-            <a href="../index.html#contact" class="btn">Notify Me</a>
-        </section>
-
-        <section class="image-container">
-            <img src="../assets/images/Offline.webp" alt="Website Maintenance Illustration">
-        </section>
-
-    </main>
-</div>
-
-</body>
 
 
 

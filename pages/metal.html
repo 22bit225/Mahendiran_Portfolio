@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development | Mahendran</title>
+<link rel="icon" type="image/png" href="../assets/images/Mahi.webp">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTZ34KNEL7"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-HTZ34KNEL7', { send_page_view: true });
+</script>
+
+<style>
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --blue: #58a6ff;
+    --green: #3fb950;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #c9d1d9;
+}
+
+a { text-decoration: none; color: white; }
+
+/* Navbar */
+.navbar { background: var(--card); padding: 15px 10%; }
+.navbar a { font-weight: bold; }
+
+/* Main Container */
+.container {
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Project Image */
+.project-img-box {
+    display: flex;
+    justify-content: center; /* center horizontally */
+}
+.project-img-box img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--blue);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Project Description */
+.desc-box {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+.desc-box h2 { color: var(--blue); margin-bottom: 20px; }
+.desc-box p { margin: 10px 0; line-height: 1.6; }
+.features-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.features-list span { background: #21262d; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; }
+
+/* Footer */
+footer { text-align: center; padding: 30px; background: var(--card); margin-top: 50px; }
+
+@media(max-width: 900px) {
+    .container { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="./web-dev.html">⮜ Home</a>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+
+    <!-- Project Image -->
+    <div class="project-img-box">
+        <img src="../project-images/Metal1.webp" alt="Metal Booking System">
+    </div>
+
+    <!-- Project Description -->
+    <div class="desc-box">
+        <h2>Project Description</h2>
+
+        <p><strong>Purpose:</strong> This project is designed for real-time metal booking under the IIPS platform. I developed it during my internship at the IIPS Institute. It allows users to book metals with details such as quantity, size, and amount while providing a professional, interactive experience.</p>
+
+        <p><strong>Problem Statement:</strong> Traditionally, booking metals involves manual tracking of inventory and delayed confirmation of orders. Users often struggle to check availability or record precise details like size and quantity in real-time.</p>
+
+        <p><strong>Solution:</strong> The system provides a <strong>real-time metal booking platform</strong> where users can log in securely, browse available metals, select desired quantity, size, and amount, and instantly confirm bookings. Admin and staff can monitor orders efficiently, ensuring accuracy and transparency.</p>
+
+        <p><strong>Key Features:</strong></p>
+        <div class="features-list">
+            <span>✅ User Login & Secure Authentication</span>
+            <span>✅ Real-Time Metal Availability</span>
+            <span>✅ Select Quantity, Size, and Amount</span>
+            <span>✅ Instant Booking Confirmation</span>
+            <span>✅ Dashboard for Users & Admin</span>
+            <span>✅ History of Bookings</span>
+            <span>✅ Responsive Home Page Design</span>
+            <span>✅ Efficient Record Management</span>
+        </div>
+
+        <p><strong>Importance:</strong> Eliminates manual errors, saves time, and provides a transparent system for metal bookings. Users can manage bookings efficiently, while admins can track inventory and confirm orders quickly.</p>
+
+        <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Responsive Web Design, Real-Time Data Handling, Secure Login Systems.</p>
+
+        <p><strong>Conclusion:</strong> This project offers a robust, user-friendly, and secure platform for metal booking. It improves user experience, streamlines booking processes, and provides real-time updates, making metal transactions simpler and more reliable.</p>
+
+        <p><em>Note: This project was completed during my internship at the IIPS Institute.</em></p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Mahendran | Metal Urical Booking System
+</footer>
+
+</body>
+</html>
